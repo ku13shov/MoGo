@@ -98,6 +98,7 @@ hr {
 }
 
 .header.fixed{
+  padding: 10px 0;
   background-color: #eb8d8b;
   position: fixed;
   top: 0;
@@ -176,6 +177,10 @@ hr {
   border: 0;
   background: none;
   cursor: pointer;
+}
+
+.nav-toggle:focus {
+  outline: 0;
 }
 
 .nav-toggle__item {
@@ -628,11 +633,15 @@ hr {
 /* REVIEWS   
 ============================================== */
 .reviews {
-  padding: 0 110px;
   position: relative;
 }
 
+.slick-slider {
+  padding: 0 110px;
+}
+
 .reviews__item {
+  min-height: 210px;
   padding-left: 255px;
   position: relative;
 }
@@ -671,8 +680,11 @@ hr {
   margin-right: 10px;
 }
 
-.reviews__btn {
+.slick-arrow {
+  cursor: pointer;
   font-size: 0;
+  background: none;
+  border: 0;
   color: transparent;
   position: absolute;
   top: 50%;
@@ -680,7 +692,11 @@ hr {
   transform: translateY(-50%);
 }
 
-.reviews__btn:after {
+.slick-arrow:focus{
+  outline: 0;
+}
+
+.slick-arrow:after {
   content: '';
   display: block;
   width: 16px;
@@ -690,12 +706,12 @@ hr {
 }
 
 
-.reviews__btn--prev {
+.slick-prev {
   left: 0;
   transform: rotate(-135deg);
 }
 
-.reviews__btn--next {
+.slick-next {
   right: 0;
   transform: rotate(45deg);
 }
@@ -1266,7 +1282,7 @@ hr {
     padding-left: 175px;
   }
 
-  .reviews {
+  .slick-slider {
     padding: 0px 55px;
 }
 
@@ -1328,6 +1344,10 @@ hr {
     top: 100%;
     left: 0;
     background: #eb8d8b;
+  }
+
+  .nav.active {
+    display: block;
   }
 
   .nav__link {
@@ -1501,11 +1521,11 @@ hr {
   }
 
   /* reviews */
-  .reviews {
+  .slick-slider {
     padding: 0;
   }
 
-  .reviews__btn {
+  .slick-arrow {
     top: 18%;
   }
 
